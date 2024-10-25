@@ -70,10 +70,9 @@ resource "azurerm_linux_virtual_machine" "example" {
       "sudo apt-get update",
       "sudo apt-get install -y docker.io",
       "sudo systemctl start docker",
-      "sudo systemctl enable docker",
+      "sudo systemctl enable docker"
 
-      "git clone https://github.com/devopsinsiders/ReactTodoUIMonolith.git /tmp/ReactTodoapp",
-       "git clone https://github.com/devopsinsiders/PyTodoBackendMonolith.git /tmp/PyTodoapp"
+      
     ]
 
 connection {
@@ -97,7 +96,4 @@ provisioner "local-exec" {
 
 }
 
-##thisss is feature
 
-### thisis master
-##git fetch
