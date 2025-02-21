@@ -3,6 +3,7 @@ provider "azurerm" {
 subscription_id = "3ba70bac-d8e7-4f2b-8e18-7fa19d2fb0f1"
 }
 
+
 resource "azurerm_resource_group" "example" {
   name     = "example-resources1"
   location = "West Europe"
