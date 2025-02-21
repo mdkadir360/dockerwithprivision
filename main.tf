@@ -66,33 +66,10 @@ resource "azurerm_linux_virtual_machine" "example" {
     version   = "latest"
   }
 
- provisioner "remote-exec" {
-    inline = [
-      "sudo apt-get update",
-      "sudo apt-get install -y docker.io",
-      "sudo systemctl start docker",
-      "sudo systemctl enable docker"
-
-      
-    ]
-
-connection {
-  host = self.public_ip_address
-  user = self.admin_username
-  password = self.admin_password
-  type = "ssh"
-  timeout = "4m"
-}
 
 
 
 
-}
-
-provisioner "local-exec" {
-  command = "echo Everything > done.txt"
-  
-}
 
 
 }
